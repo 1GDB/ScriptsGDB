@@ -1,16 +1,20 @@
 {
-  "name": "your-project-name",
+  "name": "ScriptsGDB",
   "version": "1.0.0",
-  "description": "A description of your project",
-  "main": Gestor de Construções - GDB.js",  // Change this to your actual main file
+  "description": "Scripts for Gestor de Construções and Recompensas e Missões",
+  "main": "index.js",
   "scripts": {
-    "start": "node Gestor de Construções - GDB.js",  // Adjust this command as needed
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "GatoDosBots",
+  "author": "1GDB",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1"
+  },
+  "scriptsGDB": {
+    "Gestor_de_Construcoes": "https://github.com/1GDB/ScriptsGDB/blob/main/Gestor_de_Construcoes-GDB.js",
+    "Recompensas_e_Missoes": "https://github.com/1GDB/ScriptsGDB/blob/main/Recompensas_e_Missoes-GDB.js"
   }
 }
