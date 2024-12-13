@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "install": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "1GDB",
@@ -12,9 +13,5 @@
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1"
-  },
-  "scriptsGDB": {
-    "Gestor_de_Construcoes": "https://github.com/1GDB/ScriptsGDB/blob/main/Gestor_de_Construcoes-GDB.js",
-    "Recompensas_e_Missoes": "https://github.com/1GDB/ScriptsGDB/blob/main/Recompensas_e_Missoes-GDB.js"
   }
 }
