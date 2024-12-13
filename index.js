@@ -1,4 +1,6 @@
 const axios = require('axios');
+const { LocalStorage } = require('node-localstorage');
+const localStorage = new LocalStorage('./scratch');  // Set up local storage
 
 async function loadAndExecuteScript(url) {
     try {
