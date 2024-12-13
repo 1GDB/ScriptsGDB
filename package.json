@@ -1,0 +1,16 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "A description of your project",
+  "main": Gestor de Construções - GDB.js",  // Change this to your actual main file
+  "scripts": {
+    "start": "node Gestor de Construções - GDB.js",  // Adjust this command as needed
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GatoDosBots",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
