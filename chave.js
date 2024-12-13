@@ -20,10 +20,11 @@
         return key.trim(); // Remove any extra spaces/newlines
     }
 
-    // Verify the key with the fetched key
-    async function verifyKey(enteredKey) {
-        const gistKey = await fetchKeyFromGist();  // Fetch the key from the Gist
-        return enteredKey === gistKey;  // Check if the entered key matches the Gist key
+  // Verify the key with a list of keys from the Gist
+async function verifyKey(enteredKey) {
+    const keysList = await fetchKeyFromGist();  // Fetch the list of keys from the Gist
+    const keys = keysList.split('\n').map(key => key.trim());  // Split the keys by newline and trim spaces
+    return keys.includes(enteredKey);  // Check if the entered key is in the list
     }
 
     async function main() {
