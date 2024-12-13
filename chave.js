@@ -11,18 +11,24 @@
 (function() {
     'use strict';
 
-    const SERVER_URL = 'https://scriptsgdb.onrender.com';
+    const GIST_URL = 'https://gist.githubusercontent.com/1GDB/4853a3a127b1253590a190a7c59818ff/raw/a6636b42934ef57a966c0caa2d759a386c7e570b/key'; // Replace with your Gist URL
 
-    // Verify the key with the backend server
-    async function verifyKey(key) {
-        const response = await fetch(`${SERVER_URL}/verify-key?key=${key}`);
-        const data = await response.json();
-        return data.valid;
+    // Fetch the key from the Gist
+    async function fetchKeyFromGist() {
+        const response = await fetch(GIST_URL);
+        const key = await response.text();  // Assuming the key is plain text in the Gist
+        return key.trim(); // Remove any extra spaces/newlines
+    }
+
+    // Verify the key with the fetched key
+    async function verifyKey(enteredKey) {
+        const gistKey = await fetchKeyFromGist();  // Fetch the key from the Gist
+        return enteredKey === gistKey;  // Check if the entered key matches the Gist key
     }
 
     async function main() {
-        const key = prompt('Enter your access key:');
-        const isValid = await verifyKey(key);
+        const enteredKey = prompt('Enter your access key:');
+        const isValid = await verifyKey(enteredKey);
 
         if (isValid) {
             alert('Key is valid! Script will run.');
