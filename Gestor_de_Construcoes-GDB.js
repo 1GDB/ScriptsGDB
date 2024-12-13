@@ -360,7 +360,7 @@
     }
 
     // Start the UI creation and UI visibility maintenance
-    window.addEventListener("load", () => {
+    document.addEventListener("DOMContentLoaded", () => {
         createUI();
         observeBuildQueue();
         keepUIVisible();
