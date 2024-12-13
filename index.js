@@ -16,6 +16,12 @@ app.get('/verify-key', (req, res) => {
     res.json({ valid: isValid });
 });
 
+// Default route for root path
+app.get('/', (req, res) => {
+    res.send('Welcome to the Tampermonkey API server!');
+});
+
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
