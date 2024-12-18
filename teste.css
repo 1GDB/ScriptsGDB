@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+    background: linear-gradient(-90deg, #8DABD6, #95BFD6, #8DABD6);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #E0DEDE;
+}
+
+/* Main container for central alignment */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centered section for modal or main content */
+section {
+    position: relative;
+    text-align: center;
+}
+
+/* Modal styling */
+.modal {
+    width: 400px;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 650ms ease-in-out, top 650ms ease-in-out;
+}
+
+.modal.in {
+    top: 50%;
+    opacity: 1;
+}
+
+.modal article {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 45px 60px;
+}
+
+.modal article p {
+    color: #686E7A;
+    margin-bottom: 20px;
+}
+
+.modal::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+/* Modal header */
+.modal hgroup {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #F4F4F4;
+    border-bottom: 3px solid #8DABD6;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal hgroup h4 {
+    font-size: 1.6rem;
+    color: #FF9366;
+    font-weight: 700;
+}
+
+/* Buttons */
+button.modal-close,
+button.modal-btn {
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+
+/* Main action button */
+button.modal-btn {
+    background-color: #8DABD6;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+button.modal-btn:hover {
+    background-color: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+}
+
+/* Close button */
+button.modal-close {
+    color: #686E7A;
+    background-color: transparent;
+    border: 2px solid #D4DCE3;
+    transition: all 250ms ease-in-out;
+}
+
+button.modal-close:hover {
+    border-color: #8DABD6;
+    color: #8DABD6;
+}
