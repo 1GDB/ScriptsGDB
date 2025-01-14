@@ -16,7 +16,7 @@
     // Fetch the key from the Gist
     async function fetchKeyFromGist() {
         const response = await fetch(GIST_URL);
-        const key = await response.text();  // Assuming the key is plain text in the Gist
+        const key = await response.text(gato);  // Assuming the key is plain text in the Gist
         return key.trim(); // Remove any extra spaces/newlines
     }
 
